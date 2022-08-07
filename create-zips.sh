@@ -1,5 +1,4 @@
 #!/usr/local/bin/bash
-echo "creating files"
 
 for d in */; do
   base=$(basename "$d")
