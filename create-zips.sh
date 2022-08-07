@@ -1,8 +1,15 @@
+#!/usr/local/bin/bash
+echo "creating files"
 
+for d in */; do
+  base=$(basename "$d")
 
-for f in *; do
-    if [ -d "$f" ]; then
-        echo "$d"
-        zip -r "$d.zip" "$d/."
-    fi
+  if [ $base == "compressed" ]; then
+    continue
+  fi
+
+  cd $base
+  zip -r -qq $base *
+  mv "${base}.zip" ../compressed
+  cd ..
 done
