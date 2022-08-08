@@ -4,3 +4,6 @@
 - name: Default Project Layout
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
+- name: Basic Project Layout
+  reference: https://github.com/golang-standards/project-layout
+  url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/basic-go.zip
