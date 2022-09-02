@@ -4,3 +4,5 @@
 - name: test-2
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
+  Values:
+    Port: 8080
