@@ -9,5 +9,13 @@
     array:
       - field1: 123
         field2: 12321312
+  questions:
+    - direction: Do you want Dockerfile?
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://github.com/denizgursoy
+              content: Dockerfile
 
 
