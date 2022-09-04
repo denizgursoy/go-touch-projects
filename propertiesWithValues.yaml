@@ -1,0 +1,53 @@
+- name: Empty Project Layout
+  reference: https://go.dev/
+  url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/empty.zip
+  Questions:
+    - Direction:
+      CanSkip: true
+      CanSelectMultiple: false
+      options:
+          - Choice: XXX
+            Dependencies:
+              - dependency1
+              - dependency2
+            Files:
+              - Url: https://github.com/denizgursoy
+                Content: contentExample2
+          - Choice: YYY
+            Dependencies:
+              - dependencyY1
+              - dependencyY2
+            Files:
+              - Url: https://github.com/denizgursoy
+                Content: contentExampleY2
+              - Url: https://github.com/denizgursoy
+                Content: contentExampleY2
+                Path:
+    - Direction: Which web framework do you prefer?
+      CanSkip: true
+      CanSelectMultiple: false
+      options:
+        - Choice: XXX
+          Dependencies:
+            - dependency1
+            - dependency2
+          Files:
+            - Url: https://github.com/denizgursoy
+              Content: contentExample2
+            - Url: https://github.com/denizgursoy
+              Content: contentExample2
+              Path:
+        - Choice: YYY
+          Dependencies:
+            - dependencyY1
+            - dependencyY2
+          Files:
+            - Url: https://github.com/denizgursoy
+              Content: contentExampleY2
+              Path:
+            - Url: https://github.com/denizgursoy
+              Content: contentExampleY2
+              Path:
+- name: Default Project Layout
+  reference: https://github.com/golang-standards/project-layout
+  url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
