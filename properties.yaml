@@ -1,6 +1,36 @@
 - name: Empty Project Layout
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/empty.zip
+  questions:
+    - direction: Do you want Dockerfile?
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
+              path: Dockerfile
+    - direction: Do you want Kubernetes Deployment files?
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
+              path: app-deployment.yaml
 - name: Default Project Layout
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
+  questions:
+    - direction: Do you want Dockerfile?
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
+              path: Dockerfile
+    - direction: Do you want Kubernetes Deployment files?
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
+              path: app-deployment.yaml
