@@ -15,7 +15,14 @@
       options:
         - choice: Yes
           files:
-            - url: https://github.com/denizgursoy
-              content: Dockerfile
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
+              path: Dockerfile
+    - direction: Do you want Kubernetes Deployment?
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
+              path: app-deployment.yaml
 
 
