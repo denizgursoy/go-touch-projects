@@ -1,53 +1,63 @@
 - name: Empty Project Layout
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/empty.zip
-  Questions:
-    - Direction:
-      CanSkip: true
-      CanSelectMultiple: false
+  values:
+    port: 8080
+    array:
+      - field1: 123
+        field2: 12321312
+  questions:
+    - direction:
+      canSkip: true
+      canSelectMultiple: false
       options:
-          - Choice: XXX
-            Dependencies:
+          - choice: XXX
+            dependencies:
               - dependency1
               - dependency2
-            Files:
-              - Url: https://github.com/denizgursoy
-                Content: contentExample2
-          - Choice: YYY
-            Dependencies:
+            files:
+              - url: https://github.com/denizgursoy
+                content: contentExample2
+          - choice: YYY
+            dependencies:
               - dependencyY1
               - dependencyY2
-            Files:
-              - Url: https://github.com/denizgursoy
-                Content: contentExampleY2
-              - Url: https://github.com/denizgursoy
-                Content: contentExampleY2
-                Path:
-    - Direction: Which web framework do you prefer?
-      CanSkip: true
-      CanSelectMultiple: false
+            files:
+              - url: https://github.com/denizgursoy
+                content: contentExampleY2
+              - url: https://github.com/denizgursoy
+                content: contentExampleY2
+                path:
+    - direction: Which web framework do you prefer?
+      canSkip: true
+      canSelectMultiple: false
       options:
-        - Choice: XXX
-          Dependencies:
+        - choice: XXX
+          dependencies:
             - dependency1
             - dependency2
-          Files:
-            - Url: https://github.com/denizgursoy
-              Content: contentExample2
-            - Url: https://github.com/denizgursoy
-              Content: contentExample2
-              Path:
-        - Choice: YYY
-          Dependencies:
+          files:
+            - url: https://github.com/denizgursoy
+              content: contentExample2
+            - url: https://github.com/denizgursoy
+              content: contentExample2
+              path:
+        - choice: YYY
+          dependencies:
             - dependencyY1
             - dependencyY2
-          Files:
-            - Url: https://github.com/denizgursoy
-              Content: contentExampleY2
-              Path:
-            - Url: https://github.com/denizgursoy
-              Content: contentExampleY2
-              Path:
+          files:
+            - url: https://github.com/denizgursoy
+              content: contentExampleY2
+              path:
+            - url: https://github.com/denizgursoy
+              content: contentExampleY2
+              path:
 - name: Default Project Layout
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
+  values:
+    port: 8080
+    array:
+      - field1: 123
+        field2: 12321312

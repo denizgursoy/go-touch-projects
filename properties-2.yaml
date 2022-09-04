@@ -4,10 +4,10 @@
 - name: test-2
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
-  Values:
-    Port: 8080
-    Array:
-      - Field1: 123
-        Field2: 12321312
+  values:
+    port: 8080
+    array:
+      - field1: 123
+        field2: 12321312
 
 
