@@ -16,13 +16,13 @@
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
-              path: Dockerfile
+              targetDirectory: Dockerfile
     - direction: Do you want Kubernetes Deployment files?
       canSkip: true
       options:
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
-              path: app-deployment.yaml
+              targetDirectory: app-deployment.yaml
 
 
