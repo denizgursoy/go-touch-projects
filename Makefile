@@ -6,7 +6,7 @@ PROJECT_FULL_PATH={{.ProjectFullPath}}
 
 {{ if .isDocker -}}
 docker-build:
-	docker build . -t {{.ProjectName}}:latest
+	docker build -t {{.ProjectName}}:latest .
 {{- end }}
 
 {{ if .isKubernetes -}}
