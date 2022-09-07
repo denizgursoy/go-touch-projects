@@ -28,7 +28,7 @@
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               targetDirectory: Dockerfile
           values:
-            - isDocker: true
+            isDocker: true
     - direction: Do you want Kubernetes Deployment files?
       canSkip: true
       options:
@@ -37,7 +37,7 @@
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
               targetDirectory: app-deployment.yaml
           values:
-            - isKubernetes: true
+            isKubernetes: true
     - direction: Do you want make file?
       canSkip: true
       options:
