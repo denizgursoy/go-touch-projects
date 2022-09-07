@@ -1,4 +1,7 @@
 PROJECT_NAME={{.ProjectName}}
+MODULE_NAME={{.ModuleName}}
+WorkingDirectory={{.WorkingDirectory}}
+ProjectFullPath={{.ProjectFullPath}}
 
 
 {{ if .isDocker -}}
