@@ -9,6 +9,8 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               targetDirectory: Dockerfile
+          values:
+            isDocker: true
     - direction: Do you want Kubernetes Deployment files?
       canSkip: true
       options:
@@ -16,6 +18,15 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
               targetDirectory: app-deployment.yaml
+          values:
+            isKubernetes: true
+    - direction: Do you want makefile?
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
+              targetDirectory: MakeFile
 - name: Default Project Layout
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
@@ -38,7 +49,7 @@
               targetDirectory: app-deployment.yaml
           values:
             isKubernetes: true
-    - direction: Do you want make file?
+    - direction: Do you want makefile?
       canSkip: true
       options:
         - choice: Yes
