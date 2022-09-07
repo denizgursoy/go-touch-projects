@@ -1,12 +1,12 @@
 PROJECT_NAME={{.ProjectName}}
 
 
-{{- if .isDocker }}
+{{ if .isDocker -}}
 docker-build:
 	docker build . -t {{.ProjectName}}:latest
-{{ end -}}
+{{- end }}
 
-{{- if .isKubernetes }}
+{{ if .isKubernetes -}}
 apply-kubernetes:
 	kubectl apply -f app-deployment.yaml
-{{ end -}}
+{{- end }}
