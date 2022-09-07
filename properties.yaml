@@ -39,9 +39,9 @@
           values:
             - isKubernetes: true
     - direction: Do you want make file?
-        canSkip: true
-        options:
-          - choice: Yes
-            files:
-              - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
-                targetDirectory: MakeFile
+      canSkip: true
+      options:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
+              targetDirectory: MakeFile
