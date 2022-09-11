@@ -6,14 +6,14 @@ RUN go mod download
 
 COPY ./ ./
 
-RUN go build -o /main
+RUN go build -o /{{ .ProjectName }}
 
 FROM gcr.io/distroless/base-debian10 AS runner
 
 WORKDIR /
 
-COPY --from=builder /main /main
+COPY --from=builder /{{ .ProjectName }} /{{ .ProjectName }}
 
 USER nonroot:nonroot
 
-ENTRYPOINT ["/main"]
+ENTRYPOINT ["/{{ .ProjectName }}"]

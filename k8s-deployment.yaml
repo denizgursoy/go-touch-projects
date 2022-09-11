@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-app-deployment
+  name: {{ .ProjectName }}-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: go-app
+      app: {{ .ProjectName }}
   template:
     metadata:
       labels:
-        app: go-app
+        app: {{ .ProjectName }}
     spec:
       containers:
-        - name: app
-          image: app:latest
+        - name: {{.ProjectName}}
+          image: {{.ProjectName}}:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
@@ -22,11 +22,11 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: app-service
+  name: {{ .ProjectName }}-service
 spec:
   type: LoadBalancer
   selector:
-    app: go-app
+    app: {{ .ProjectName }}
   ports:
     - port: 8080
       targetPort: 8090
