@@ -27,7 +27,7 @@
                 content: contentExampleY2
               - url: https://github.com/denizgursoy
                 content: contentExampleY2
-                targetDirectory:
+                pathFromRoot:
     - direction: Which web framework do you prefer?
       canSkip: true
       canSelectMultiple: false
@@ -41,7 +41,7 @@
               content: contentExample2
             - url: https://github.com/denizgursoy
               content: contentExample2
-              targetDirectory:
+              pathFromRoot:
         - choice: YYY
           dependencies:
             - dependencyY1
@@ -49,10 +49,10 @@
           files:
             - url: https://github.com/denizgursoy
               content: contentExampleY2
-              targetDirectory:
+              pathFromRoot:
             - url: https://github.com/denizgursoy
               content: contentExampleY2
-              targetDirectory:
+              pathFromRoot:
 - name: Default Project Layout
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
