@@ -2,7 +2,7 @@
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/empty.zip
   values:
-    project: simple
+    Project: simple
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
@@ -33,7 +33,7 @@
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/compressed/default.zip
   values:
-    project: default
+    Project: default
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true

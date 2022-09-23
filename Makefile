@@ -5,12 +5,12 @@ PROJECT_FULL_PATH={{.ProjectFullPath}}
 
 .DEFAULT_GOAL := build
 
-{{ if eq project "simple"}}
+{{ if eq .Project "simple"}}
 build:
 	@go build -o {{.ProjectName}} .
 {{- end }}
 
-{{ if eq project "default"}}
+{{ if eq .Project "default"}}
 build:
 	@go build -o {{.ProjectName}} ./cmd/main.go
 {{- end }}
