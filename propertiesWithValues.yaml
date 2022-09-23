@@ -10,7 +10,7 @@
     - direction:
       canSkip: true
       canSelectMultiple: false
-      options:
+      choices:
           - choice: XXX
             dependencies:
               - dependency1
@@ -31,7 +31,7 @@
     - direction: Which web framework do you prefer?
       canSkip: true
       canSelectMultiple: false
-      options:
+      choices:
         - choice: XXX
           dependencies:
             - dependency1

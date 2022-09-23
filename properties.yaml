@@ -6,7 +6,7 @@
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
-      options:
+      choices:
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
@@ -15,7 +15,7 @@
             isDocker: true
     - direction: Do you want Kubernetes Deployment files?
       canSkip: true
-      options:
+      choices:
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
@@ -24,7 +24,7 @@
             isKubernetes: true
     - direction: Do you want makefile?
       canSkip: true
-      options:
+      choices:
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
@@ -37,7 +37,7 @@
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
-      options:
+      choices:
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
@@ -46,7 +46,7 @@
             isDocker: true
     - direction: Do you want Kubernetes Deployment files?
       canSkip: true
-      options:
+      choices:
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
@@ -55,7 +55,7 @@
             isKubernetes: true
     - direction: Do you want makefile?
       canSkip: true
-      options:
+      choices:
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
