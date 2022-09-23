@@ -8,12 +8,12 @@ PROJECT_FULL_PATH={{.ProjectFullPath}}
 {{ if eq .Project "simple"}}
 build:
 	@go build .
-{{- end -}}
+{{- end }}
 
 {{ if eq .Project "default"}}
 build:
 	@go build -o {{.ProjectName}} ./cmd/main.go
-{{- end -}}
+{{- end }}
 
 dependencies:
 	@go mod download
