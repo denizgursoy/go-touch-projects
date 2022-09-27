@@ -1,5 +1,7 @@
 #!/usr/local/bin/bash
 
+rm -rf package/*
+
 for d in */; do
   base=$(basename "$d")
 
