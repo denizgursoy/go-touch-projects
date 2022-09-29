@@ -26,7 +26,7 @@
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
-              pathFromRoot: MakeFile
+              pathFromRoot: Makefile
 - name: Default Project Layout
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/package/default.tar.gz
@@ -55,4 +55,4 @@
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/DefaultMakefile
-              pathFromRoot: MakeFile
+              pathFromRoot: Makefile
