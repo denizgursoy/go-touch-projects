@@ -1,7 +1,5 @@
 PROJECT_NAME={{.ProjectName}}
 MODULE_NAME={{.ModuleName}}
-WORKING_DIRECTORY={{.WorkingDirectory}}
-PROJECT_FULL_PATH={{.ProjectFullPath}}
 
 .DEFAULT_GOAL := build
 
@@ -24,11 +22,11 @@ get:
 {{ if .isDocker -}}
 .PHONY: docker
 docker:
-	docker build -t {{.ProjectName}}:latest .
+	@docker build -t {{.ProjectName}}:latest .
 {{- end }}
 
 {{ if .isKubernetes -}}
 .PHONY: kubernetes
 kubernetes:
-	kubectl apply -f app-deployment.yaml
+	@kubectl apply -f app-deployment.yaml
 {{- end }}
