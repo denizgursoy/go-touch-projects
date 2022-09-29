@@ -5,24 +5,30 @@ PROJECT_FULL_PATH={{.ProjectFullPath}}
 
 .DEFAULT_GOAL := build
 
+.PHONY: build
 build:
 	@go build -o {{.ProjectName}} ./cmd/main.go
 
+.PHONY: fmt
 fmt:
 	@go fmt ./...
 
+.PHONY: test
 test:
 	@go test -v ./...
 
+.PHONY: get
 get:
 	@go mod download
 
 {{ if .isDocker -}}
-docker-build:
+.PHONY: docker
+docker:
 	docker build -t {{.ProjectName}}:latest .
 {{- end }}
 
 {{ if .isKubernetes -}}
-apply-kubernetes:
+.PHONY: kubernetes
+kubernetes:
 	kubectl apply -f app-deployment.yaml
 {{- end }}
