@@ -1,8 +1,6 @@
 - name: Empty Project Layout
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/package/empty.tar.gz
-  values:
-    Project: simple
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
@@ -32,8 +30,6 @@
 - name: Default Project Layout
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/package/default.tar.gz
-  values:
-    Project: default
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
@@ -58,5 +54,5 @@
       choices:
         - choice: Yes
           files:
-            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/DefaultMakefile
               pathFromRoot: MakeFile
