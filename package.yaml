@@ -36,7 +36,7 @@
       choices:
         - choice: Yes
           files:
-            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/build/Dockerfile
               pathFromRoot: Dockerfile
           values:
             isDocker: true
@@ -45,7 +45,7 @@
       choices:
         - choice: Yes
           files:
-            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/build/k8s-deployment.yaml
               pathFromRoot: app-deployment.yaml
           values:
             isKubernetes: true
