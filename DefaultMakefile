@@ -28,5 +28,5 @@ docker:
 {{ if .isKubernetes -}}
 .PHONY: kubernetes
 kubernetes:
-	@kubectl apply -f app-deployment.yaml
+	@kubectl apply -f ./build/app-deployment.yaml
 {{- end }}
