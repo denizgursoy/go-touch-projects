@@ -22,7 +22,7 @@ get:
 {{ if .isDocker -}}
 .PHONY: docker
 docker:
-	@docker build -t {{.ProjectName}}:latest .
+	@docker build -f ./build/Dockerfile -t a:latest .
 {{- end }}
 
 {{ if .isKubernetes -}}
