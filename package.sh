@@ -5,7 +5,7 @@ rm -rf package/*
 for d in */; do
   base=$(basename "$d")
 
-  if [ $base == "package" ] || [ $base == "compressed" ]; then
+  if [ $base == "package" ]  || [ $base == "compressed" ] || [ $base == "test" ]; then
     continue
   fi
 
