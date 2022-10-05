@@ -28,9 +28,9 @@ docker:
 {{ if .isKubernetes -}}
 .PHONY: deploy
 deploy:
-	@kubectl apply -f ./deployments/app-deployment.yaml
+	@kubectl apply -f deployments/app-deployment.yaml
 
 .PHONY: undeploy
 undeploy:
-	@kubectl delete -f ./deployments/app-deployment.yaml
+	@kubectl delete -f deployments/app-deployment.yaml
 {{- end }}
