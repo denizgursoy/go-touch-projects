@@ -37,7 +37,7 @@
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/DefaultDockerfile
-              pathFromRoot: /build/Dockerfile
+              pathFromRoot: /build/package/Dockerfile
           values:
             isDocker: true
     - direction: Do you want Kubernetes Deployment files?
@@ -46,7 +46,7 @@
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
-              pathFromRoot: /build/app-deployment.yaml
+              pathFromRoot: /deployments/app-deployment.yaml
           values:
             isKubernetes: true
     - direction: Do you want makefile?

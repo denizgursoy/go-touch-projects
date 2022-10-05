@@ -22,11 +22,11 @@ get:
 {{ if .isDocker -}}
 .PHONY: docker
 docker:
-	@docker build -f ./build/Dockerfile -t {{.ProjectName}}:latest .
+	@docker build -f ./build/package/Dockerfile -t {{.ProjectName}}:latest .
 {{- end }}
 
 {{ if .isKubernetes -}}
 .PHONY: kubernetes
 kubernetes:
-	@kubectl apply -f ./build/app-deployment.yaml
+	@kubectl apply -f ./deployment/app-deployment.yaml
 {{- end }}
