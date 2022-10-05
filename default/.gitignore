@@ -19,6 +19,12 @@
 
 # Go workspace file
 go.work
+
+### VisualStudioCode ###
+.vscode/*
+
 .idea
+
+.DS_Store
 
 {{ .ProjectName }}
