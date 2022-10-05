@@ -26,7 +26,11 @@ docker:
 {{- end }}
 
 {{ if .isKubernetes -}}
-.PHONY: kubernetes
-kubernetes:
-	@kubectl apply -f app-deployment.yaml
+.PHONY: deploy
+deploy:
+	@kubectl apply -f ./app-deployment.yaml
+
+.PHONY: undeploy
+undeploy:
+	@kubectl delete -f ./app-deployment.yaml
 {{- end }}
