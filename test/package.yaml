@@ -38,6 +38,12 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               pathFromRoot: Dockerfile
+            - content: |
+                1.xxxx
+                2.sdsds
+
+
+              pathFromRoot: test.txt
           values:
             isDocker: true
     - direction: Do you want Kubernetes Deployment files?
