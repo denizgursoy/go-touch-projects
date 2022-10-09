@@ -17,7 +17,7 @@ spec:
           image: {{.ProjectName}}:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 8080
+            - containerPort: 8090
 ---
 kind: Service
 apiVersion: v1
