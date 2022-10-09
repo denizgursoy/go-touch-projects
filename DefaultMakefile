@@ -5,7 +5,7 @@ MODULE_NAME={{.ModuleName}}
 
 .PHONY: build
 build:
-	@go build -o {{.ProjectName}} ./cmd/main.go
+	@go build ./cmd/{{.ProjectName}}/
 
 .PHONY: fmt
 fmt:
