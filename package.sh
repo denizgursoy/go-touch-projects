@@ -11,4 +11,3 @@ for d in */; do
 
   gotouch package --source "./$base" --target ./package/
 done
-K
