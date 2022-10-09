@@ -2,13 +2,16 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"net/http"
 )
 
-func main() {
-	for {
-		time.Sleep(5 * time.Second)
-		fmt.Println("hello world")
-	}
+func hello(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprintf(w, "hello\n")
+}
 
+func main() {
+
+	http.HandleFunc("/hello", hello)
+
+	http.ListenAndServe(":8080", nil)
 }
