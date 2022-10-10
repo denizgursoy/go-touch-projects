@@ -28,5 +28,5 @@ spec:
   selector:
     app: {{ .ProjectName }}
   ports:
-    - port: 8080
+    - port: 8091
       targetPort: 8090
