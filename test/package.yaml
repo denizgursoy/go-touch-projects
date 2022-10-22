@@ -37,6 +37,7 @@
         - choice: Yes
           dependencies:
             - github.com/labstack/echo/v4@v4.9.1
+            - github.com/spf13/viper
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               pathFromRoot: Dockerfile
