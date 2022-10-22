@@ -33,10 +33,10 @@
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
-      dependencies:
-        - github.com/labstack/echo/v4@v4.9.1
       choices:
         - choice: Yes
+          dependencies:
+            - github.com/labstack/echo/v4@v4.9.1
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               pathFromRoot: Dockerfile
