@@ -21,7 +21,7 @@
               pathFromRoot: app-deployment.yaml
           values:
             isKubernetes: true
-    - direction: Do you want makefile?
+    - direction: Do you want Makefile?
       canSkip: true
       choices:
         - choice: Yes
@@ -51,7 +51,7 @@
               pathFromRoot: /deployments/app-deployment.yaml
           values:
             isKubernetes: true
-    - direction: Do you want makefile?
+    - direction: Do you want Makefile?
       canSkip: true
       choices:
         - choice: Yes
