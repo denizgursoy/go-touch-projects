@@ -1,0 +1,40 @@
+- name: Backend for Frontend # mandatory
+  url: https://github.com/microservice-project/microservice.git # mandatory
+- name: Microservice
+  url: https://github.com/bff-project/bff.git # can be a git repository
+- name: Api Gateway
+  url: https://raw.githubusercontent.com/api/app/main/api-gateway.tar.gz # can be a tar.gz archive file
+  language: go # must be go or golang for go projects, otherwise omit the field
+  questions:
+    - direction: Which HTTP library do you want to use?
+      choices:
+        - choice: Echo
+          values:
+            httpLibrary: echo
+          dependencies:
+            - github.com/labstack/echo/v4
+          files:
+            - pathFromRoot: handler/echoHandler.go
+              url: https://raw.githubusercontent.com/api/app/main/handler.go
+        - choice: Gorilla Mux
+          values:
+            httpLibrary: gorilla
+          dependencies:
+            - github.com/gorilla/mux
+        - choice: Gin
+          values:
+            httpLibrary: gin
+          dependencies:
+            - github.com/gin-gonic/gin
+          files:
+            - pathFromRoot: handler/ginHandler.go
+              content: |
+                package handler
+
+                func createHandler(router *gin.Engine){
+                  router.GET("/user/:name", func(c *gin.Context) {
+                    name := c.Param("name")
+                    c.String(http.StatusOK, "Hello %s", name)
+                  })
+                }
+
