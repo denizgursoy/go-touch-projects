@@ -1,4 +1,4 @@
-- name: Empty Project Layout
+- name: Simple Module Project
   reference: https://go.dev/ref/mod
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/package/empty.tar.gz
   language: go
