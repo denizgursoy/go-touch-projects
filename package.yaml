@@ -7,6 +7,10 @@
       canSkip: true
       choices:
         - choice: Yes
+          dependencies:
+            - github.com/labstack/echo/v4
+            - github.com/gorilla/mux
+            - github.com/gin-gonic/gin
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               pathFromRoot: Dockerfile
