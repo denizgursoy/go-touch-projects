@@ -71,7 +71,7 @@
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/test/package/delimeter.tar.gz
   language: go
-  delimeters: "<< >>"
+  delimiters: "<< >>"
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
