@@ -67,7 +67,7 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/DefaultMakefile
               pathFromRoot: Makefile
-- name: Empty Project Layout
+- name: Delimiter test project
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/test/package/delimeter.tar.gz
   language: go
