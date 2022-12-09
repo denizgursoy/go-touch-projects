@@ -98,3 +98,14 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
               pathFromRoot: Makefile
+- name: gitcheckout main
+  reference: https://go.dev/
+  url: https://github.com/denizgursoy/go-touch-projects.git
+  language: go
+- name: gitcheckout brain
+  reference: https://go.dev/
+  url: https://github.com/denizgursoy/go-touch-projects.git
+  branch: branch-test
+  language: go
+
+
