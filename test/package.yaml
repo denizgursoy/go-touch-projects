@@ -122,7 +122,7 @@
               pathFromRoot: Dockerfile
           values:
             isDocker: true
-        - choice: Yes
+        - choice: No
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
               pathFromRoot: Makefile
