@@ -125,4 +125,4 @@
         - choice: Yes
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
-            pathFromRoot: Makefile
+              pathFromRoot: Makefile
