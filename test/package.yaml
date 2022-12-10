@@ -107,5 +107,22 @@
   url: https://github.com/denizgursoy/go-touch-projects.git
   branch: branch-test
   language: go
-
-
+- name: multiple select
+  reference: https://go.dev/
+  url: https://github.com/denizgursoy/go-touch-projects.git
+  branch: branch-test
+  language: go
+  questions:
+    - direction: Select choices?
+      canSelectMultiple: true
+      choices:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
+              pathFromRoot: Dockerfile
+          values:
+            isDocker: true
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
+            pathFromRoot: Makefile
