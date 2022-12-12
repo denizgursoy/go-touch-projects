@@ -102,7 +102,7 @@
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects.git
   language: go
-- name: gitcheckout brain
+- name: gitcheckout branch
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects.git
   branch: branch-test
