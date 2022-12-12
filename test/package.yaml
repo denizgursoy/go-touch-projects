@@ -116,7 +116,7 @@
     - direction: Select choices?
       canSelectMultiple: true
       choices:
-        - choice: dcokerfile
+        - choice: dockerfile
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               pathFromRoot: Dockerfile
@@ -126,7 +126,7 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
               pathFromRoot: Makefile
-        - choice: depoloyment
+        - choice: deployment
           files:
           - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
             pathFromRoot: app-deployment.yaml
