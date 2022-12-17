@@ -132,3 +132,15 @@
             pathFromRoot: app-deployment.yaml
           values:
             isKubernetes: true
+    - direction: Select features you want
+      canSelectMultiple: true
+      choices:
+        - choice: Elastic APM
+          values:
+            isElastic: true
+        - choice: Swagger
+          values:
+            isSwagger: true
+        - choice: Keycloak
+          values:
+            isKeycloak: true

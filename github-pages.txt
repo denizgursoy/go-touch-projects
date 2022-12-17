@@ -1,0 +1,14 @@
+package main
+
+import "net/http"
+
+func main(){
+e := echo.New()
+
+{{range .endpoints }}
+e.{{.method}}("{{.path}}", func (c echo.Context) error {
+    return c.String({{.status}}, "{{.body}}")
+})
+{{ end }}
+e.Logger.Fatal(e.Start(":8080"))
+}
