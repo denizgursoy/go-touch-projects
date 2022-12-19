@@ -1,6 +1,7 @@
 - name: Simple Module Project
   reference: https://go.dev/ref/mod
-  url: https://github.com/denizgursoy/go-touch-projects/raw/main/package/empty.tar.gz
+  url: https://github.com/denizgursoy/go-touch-projects.git
+  branch: empty
   language: go
   questions:
     - direction: Do you want Dockerfile?
@@ -30,7 +31,8 @@
               pathFromRoot: Makefile
 - name: Standard Project Layout
   reference: https://github.com/golang-standards/project-layout
-  url: https://github.com/denizgursoy/go-touch-projects/raw/main/package/standard.tar.gz
+  url: https://github.com/denizgursoy/go-touch-projects.git
+  branch: standard
   language: go
   questions:
     - direction: Do you want Dockerfile?

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"text/template"
 )
@@ -47,12 +48,13 @@ func main() {
 		},
 	}
 	inputs = append(inputs,
-		input{fileName: "medium-pom.xml", values: mediumValues},
-		input{fileName: "github-pages.txt", values: githubPages},
-		input{fileName: "x.txt", values: mediumWebServerValues},
-		input{fileName: "map.txt", values: iterateMap},
+		input{fileName: "documents/medium-pom.xml", values: mediumValues},
+		input{fileName: "documents/github-pages.txt", values: githubPages},
+		input{fileName: "documents/x.txt", values: mediumWebServerValues},
+		input{fileName: "documents/map.txt", values: iterateMap},
 	)
-
+	getwd, _ := os.Getwd()
+	fmt.Println(getwd)
 	for _, i := range inputs {
 		file, err2 := os.ReadFile(i.fileName)
 		if err2 != nil {
