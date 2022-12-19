@@ -1,0 +1,11 @@
+func main(){
+e := echo.New()
+
+{{ range $key, $value := .endpoints }}
+e.GET("{{$key}}", func (c echo.Context) error {
+    return c.String(http.StatusOK, "{{$value}}")
+})
+{{ end }}
+
+e.Logger.Fatal(e.Start(":8080"))
+}

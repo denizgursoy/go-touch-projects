@@ -40,10 +40,17 @@ func main() {
 	mediumWebServerValues := map[string]interface{}{
 		"httpLibrary": "gin",
 	}
+	iterateMap := map[string]interface{}{
+		"endpoints": map[string]string{
+			"/":        "Hello, World!",
+			"/payment": "Payment is created",
+		},
+	}
 	inputs = append(inputs,
 		input{fileName: "medium-pom.xml", values: mediumValues},
 		input{fileName: "github-pages.txt", values: githubPages},
 		input{fileName: "x.txt", values: mediumWebServerValues},
+		input{fileName: "map.txt", values: iterateMap},
 	)
 
 	for _, i := range inputs {
