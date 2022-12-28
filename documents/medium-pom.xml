@@ -4,6 +4,9 @@
         <groupId>{{ .groupId }}</groupId>
         <artifactId>{{ .artifactId }}</artifactId>
         <version>{{ .version }}</version>
+        {{- if .scope }}
+        <scope>{{.scope}}</scope>
+        {{- end }}
     </dependency>
     {{- end }}
 </dependencies>
