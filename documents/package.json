@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+  {{- range .Dependencies }}
+  {{- if not .devDependency}}
+    "{{.name}}": "{{.version}}"
+  {{- end }}
+  {{- end }}
+  },
+  "devDependencies": {
+  {{- range .Dependencies }}
+  {{- if .devDependency}}
+    "{{.name}}": "{{.version}}"
+  {{- end }}
+  {{- end }}
+  }
+}

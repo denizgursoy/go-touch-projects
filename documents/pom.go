@@ -47,14 +47,24 @@ func main() {
 			"/payment": "Payment is created",
 		},
 	}
+	nodejsValues := map[string]interface{}{
+		"Dependencies": []interface{}{
+			map[string]interface{}{
+				"name":          "jest",
+				"version":       "29.3.1",
+				"devDependency": true,
+			},
+		},
+	}
 	inputs = append(inputs,
 		input{fileName: "documents/medium-pom.xml", values: mediumValues},
 		input{fileName: "documents/github-pages.txt", values: githubPages},
 		input{fileName: "documents/x.txt", values: mediumWebServerValues},
 		input{fileName: "documents/map.txt", values: iterateMap},
+		input{fileName: "documents/package.json", values: nodejsValues},
 	)
-	getwd, _ := os.Getwd()
-	fmt.Println(getwd)
+	//getwd, _ := os.Getwd()
+	//fmt.Println(getwd)
 	for _, i := range inputs {
 		file, err2 := os.ReadFile(i.fileName)
 		if err2 != nil {
@@ -66,6 +76,7 @@ func main() {
 		}
 
 		err = tmpl.Execute(os.Stdout, i.values)
+		fmt.Println()
 		if err != nil {
 			panic(err)
 		}
