@@ -132,3 +132,30 @@
             pathFromRoot: app-deployment.yaml
           values:
             isKubernetes: true
+- name: Project with no url
+  questions:
+    - direction: Do you want Dockerfile?
+      canSkip: true
+      choices:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
+              pathFromRoot: Dockerfile
+          values:
+            isDocker: true
+    - direction: Do you want Kubernetes Deployment files?
+      canSkip: true
+      choices:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
+              pathFromRoot: app-deployment.yaml
+          values:
+            isKubernetes: true
+    - direction: Do you want makefile?
+      canSkip: true
+      choices:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
+              pathFromRoot: Makefile
