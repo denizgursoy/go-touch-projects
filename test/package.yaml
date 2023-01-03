@@ -167,7 +167,10 @@
         {{ range .Dependencies}}
           {{.name }}
         {{ end}}
-      pathFromRoot: app-deployment.yaml
+        {{.port}}
+      pathFromRoot: values.txt
   dependencies:
     - name: "dependency1"
     - name: "dependency2"
+  values:
+    port: 8090
