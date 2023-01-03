@@ -159,3 +159,15 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Makefile
               pathFromRoot: Makefile
+- name: Project with files and dependencies
+  files:
+    - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
+      pathFromRoot: Dockerfile
+    - content: |
+        {{ range .Dependencies}}
+          {{.name }}
+        {{ end}}
+      pathFromRoot: app-deployment.yaml
+  dependencies:
+    - name: "dependency1"
+    - name: "dependency2"
