@@ -1,4 +1,4 @@
-- name: Standard Project Layout
+- name: Uber FX, echo app
   url: https://github.com/denizgursoy/go-touch-projects.git
   branch: uber-fx
   language: go
