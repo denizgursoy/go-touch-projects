@@ -14,7 +14,7 @@ func main() {
 		fx.RecoverFromPanics(),
 		fx.Provide(
 			fx.Annotate(services.NewResourceService, fx.As(new(handlers.ResourceService))),
-			repositories.NewResourceRepository,
+			fx.Annotate(repositories.NewResourceRepository, fx.As(new(services.ResourceRepository))),
 			server.CreateServer,
 			zap.NewProduction,
 		),

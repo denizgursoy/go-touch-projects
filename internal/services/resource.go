@@ -2,6 +2,6 @@ package services
 
 type (
 	Resource struct {
-		Name string
+		ID int64
 	}
 )
