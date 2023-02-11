@@ -49,6 +49,17 @@
 
 
               pathFromRoot: test.txt
+            - content: |
+              package xxx
+                
+              import "github.com/spf13/viper"
+              import "github.com/labstack/echo/v4"
+              
+              func x(){
+                e := echo.New()
+                viper.SetDefault("ContentDir", "content")
+              }
+              pathFromRoot: internal/xxx
           values:
             isDocker: true
     - direction: Do you want Kubernetes Deployment files?
