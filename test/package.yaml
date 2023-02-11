@@ -60,7 +60,7 @@
                     viper.SetDefault("ContentDir", "content")
                   }
 
-              pathFromRoot: internal/xxx
+              pathFromRoot: internal/xxx.go
           values:
             isDocker: true
     - direction: Do you want Kubernetes Deployment files?
