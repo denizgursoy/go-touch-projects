@@ -1,11 +1,10 @@
 package handlers
 
 import (
-	"github.com/denizgursoy/go-touch-projects/internal/services"
-	"github.com/labstack/echo/v4"
 	"go.uber.org/zap"
 	"net/http"
 	"strconv"
+	"{{.ModuleName}}/internal/services"
 )
 
 type (

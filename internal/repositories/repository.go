@@ -1,6 +1,6 @@
 package repositories
 
-import "github.com/denizgursoy/go-touch-projects/internal/services"
+import "{{.ModuleName}}/internal/services"
 
 type (
 	ResourceRepository struct{}

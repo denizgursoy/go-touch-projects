@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/denizgursoy/go-touch-projects/internal/handlers"
-	"github.com/denizgursoy/go-touch-projects/internal/repositories"
-	"github.com/denizgursoy/go-touch-projects/internal/server"
-	"github.com/denizgursoy/go-touch-projects/internal/services"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
+	"{{.ModuleName}}/internal/handlers"
+	"{{.ModuleName}}/internal/repositories"
+	"{{.ModuleName}}/internal/server"
+	"{{.ModuleName}}/internal/services"
 )
 
 func main() {
