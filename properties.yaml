@@ -1,0 +1,30 @@
+- name: Standard Project Layout
+  url: https://github.com/denizgursoy/go-touch-projects.git
+  branch: uber-fx
+  language: go
+  questions:
+    - direction: Do you want Dockerfile?
+      canSkip: true
+      choices:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/DefaultDockerfile
+              pathFromRoot: /build/package/Dockerfile
+          values:
+            isDocker: true
+    - direction: Do you want Kubernetes Deployment files?
+      canSkip: true
+      choices:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/k8s-deployment.yaml
+              pathFromRoot: /deployments/app-deployment.yaml
+          values:
+            isKubernetes: true
+    - direction: Do you want Makefile?
+      canSkip: true
+      choices:
+        - choice: Yes
+          files:
+            - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/DefaultMakefile
+              pathFromRoot: Makefile
