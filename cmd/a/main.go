@@ -12,11 +12,15 @@ import (
 func main() {
 	fx.New(
 		fx.RecoverFromPanics(),
-		fx.Provide(server.CreateServer),
-		fx.Provide(services.NewResourceService),
-		fx.Provide(repositories.NewResourceRepository),
-		fx.Provide(zap.NewProduction),
-		fx.Invoke(server.StartServer),
-		fx.Invoke(handlers.NewResourceHandler),
+		fx.Provide(
+			fx.Annotate(services.NewResourceService, fx.As(new(handlers.ResourceService))),
+			repositories.NewResourceRepository,
+			server.CreateServer,
+			zap.NewProduction,
+		),
+		fx.Invoke(
+			server.StartServer,
+			handlers.NewResourceHandler,
+		),
 	).Run()
 }

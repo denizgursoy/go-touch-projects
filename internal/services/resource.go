@@ -1,5 +1,7 @@
 package services
 
 type (
-	Resource struct {}
+	Resource struct {
+		Name string
+	}
 )

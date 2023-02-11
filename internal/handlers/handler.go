@@ -18,9 +18,11 @@ type (
 	}
 )
 
-func NewResourceHandler(e *echo.Echo) {
-	handler := ResourceHandler{}
-	e.GET("/", handler.GetResourceByID)
+func NewResourceHandler(e *echo.Echo, resourceService ResourceService) {
+	handler := ResourceHandler{
+		s: resourceService,
+	}
+	e.GET("/resource/:id", handler.GetResourceByID)
 }
 
 func (r *ResourceHandler) GetResourceByID(ctx echo.Context) error {
