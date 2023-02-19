@@ -32,6 +32,19 @@
   reference: https://github.com/golang-standards/project-layout
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/test/package/default.tar.gz
   language: go
+  files:
+    - content: |
+        adsasda
+      pathFromRoot: not-selected-choice-delete-file.txt
+    - content: |
+        adsasda
+      pathFromRoot: selected-choice-delete-file.txt
+    - content: |
+        adsasda
+      pathFromRoot: file-to-be-deleted.txt
+    - pathFromRoot: file-to-be-deleted.txt
+      delete: true
+      whenSelected: true
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
@@ -41,6 +54,9 @@
             - github.com/labstack/echo/v4@v4.9.1
             - github.com/spf13/viper
           files:
+            - pathFromRoot: selected-choice-delete-file.txt
+              delete: true
+              whenSelected: true
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/Dockerfile
               pathFromRoot: Dockerfile
             - content: |
@@ -79,6 +95,13 @@
           files:
             - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/main/DefaultMakefile
               pathFromRoot: Makefile
+    - direction: Not selected choice
+      canSkip: true
+      choices:
+        - choice: Not selected choice
+          files:
+            - pathFromRoot: not-selected-choice-delete-file.txt
+              delete: true
 - name: Delimiter test project
   reference: https://go.dev/
   url: https://github.com/denizgursoy/go-touch-projects/raw/main/test/package/delimeter.tar.gz
