@@ -2,6 +2,9 @@
   url: https://github.com/denizgursoy/go-touch-projects.git
   branch: uber-fx
   language: go
+  files:
+    - url: https://raw.githubusercontent.com/denizgursoy/go-touch-projects/standard/.gitignore
+      pathFromRoot: .gitignore
   questions:
     - direction: Do you want Dockerfile?
       canSkip: true
