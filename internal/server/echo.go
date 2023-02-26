@@ -25,7 +25,7 @@ func StartServer(e *echo.Echo, lifecycle fx.Lifecycle, shutdowner fx.Shutdowner,
 	lifecycle.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {
 			go func() {
-				err := e.Start(":8080")
+				err := e.Start(":8090")
 				if err != nil {
 					logger.Error(err.Error())
 				}
