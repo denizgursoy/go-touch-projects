@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"go.uber.org/zap"
+	"github.com/labstack/echo/v4"
 	"net/http"
 	"strconv"
 	"{{.ModuleName}}/internal/services"
