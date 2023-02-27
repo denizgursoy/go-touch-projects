@@ -181,7 +181,7 @@
         {{ end}}
         {{.port}}
       pathFromRoot: values.txt
-    - content: "{{test}}"
+    - content: "{{.ModuleName}}"
       pathFromRoot: properties.yaml
   dependencies:
     - name: "dependency1"
